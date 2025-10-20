@@ -22,3 +22,10 @@ def halopediaLinkBuilder(input):
 
 def print_date(month, day, year):
     print(f"{month}\\{day}\\{year}")
+
+# Dealing with user input
+def clean_input(input):
+    return input.strip()
+
+def get_code():
+    return clean_input(input())
