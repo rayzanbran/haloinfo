@@ -37,6 +37,32 @@ def print_keys():
         print(key, end = " ")
     print()
 
+# Print-independent data methods for the GUI
+def gethalo(code):
+    return(halo_names[code])
+
+def get_date(code):
+    print(halo_release_dates[code])
+    return halo_release_dates[code]
+
+def get_halopedia_link(code):
+    return f"https://halopedia.org/{helper.halopediaLinkBuilder(halo_names[code])}"
+
+def get_halo_names():
+    names = []
+    for name in halo_names:
+        names.append(halo_names[name])
+    return names
+
+def get_keys():
+    return halo_names.keys()
+
+def get_release_date(code):
+    month, day, year = halo_release_dates[code]
+    return "Released " + helper.get_date(month, day, year)
+
+
+
 # Prints the info about a Halo game based on a code being inputted
 def printhalo(code):
     """Prints info about a Halo game and a Halopedia link based on a code that is passed to it."""
