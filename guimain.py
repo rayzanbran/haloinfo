@@ -1,6 +1,5 @@
 from tkinter import *
 from tkinter import ttk
-from functools import partial
 import haloinfohelper
 
 root = Tk()
@@ -25,7 +24,6 @@ def get_halo_info(*args):
 def copy_link_to_clipboard(*args):
     root.clipboard_append(halopedia_link_label_var.get())
     root.update()
-
 
 # Telling the window elements to expand with the window size
 root.columnconfigure(0, weight=1)
